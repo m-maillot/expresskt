@@ -1,0 +1,41 @@
+version '0.1'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+    }
+}
+
+apply plugin: 'com.moowork.node'
+apply plugin: 'kotlin2js'
+
+
+node {
+    version = '6.11.0'
+    download = true
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    compile project(":lib")
+
+    testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
+}
+
+task yarnInstall( type: NodeTask, dependsOn: 'yarn' ) {
+    args = ['init', 'add', 'express']
+}
+compileKotlin2Js.kotlinOptions {
+    moduleKind = "commonjs"
+    outputFile = "demo/output/index.js"
+    sourceMap = true
+}
