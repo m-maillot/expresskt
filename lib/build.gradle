@@ -28,6 +28,6 @@ task yarnUnlink( type: NodeTask, dependsOn: 'yarn' ) {
 
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
-    outputFile = "lib/output/index.js"
+    outputFile = "output/index.js"
     sourceMap = true
 }
