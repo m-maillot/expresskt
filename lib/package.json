@@ -1,0 +1,10 @@
+{
+  "name": "ExpressKT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "kotlin": "^1.2.21"
+  }
+}

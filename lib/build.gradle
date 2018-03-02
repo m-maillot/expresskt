@@ -1,9 +1,12 @@
 version '0.1'
 
+apply plugin: 'com.moowork.node'
 apply plugin: 'kotlin2js'
 
-repositories {
-    mavenCentral()
+
+node {
+    version = '6.11.0'
+    download = true
 }
 
 dependencies {
@@ -11,6 +14,16 @@ dependencies {
     testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
 }
 
+task yarnInstall( type: NodeTask, dependsOn: 'yarn' ) {
+    args = ['init', 'add', 'express']
+}
+
+task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
+    args = ['link']
+}
+
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
+    outputFile = "lib/output/index.js"
+    sourceMap = true
 }
