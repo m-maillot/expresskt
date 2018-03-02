@@ -2,4 +2,21 @@
 
 Kotlin wrappers for ExpressJS library.
 
-ExpressJS is the default lib supported by firebase.
+## How to use
+
+Compile source :
+
+```
+// Install npm dependencies
+./gradlew demo:yarn_install
+// Build the JS file
+./gradlew demo:build
+```
+
+Run node server :
+```
+node demo/output/index.js
+```
+
+Test server at https://localhost:3000/test.
+You should see Hello world!

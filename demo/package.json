@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
-    "kotlin": "^1.2.21"
+    "kotlin": "^1.2.21",
+    "nodemon": "^1.15.1"
   }
 }
