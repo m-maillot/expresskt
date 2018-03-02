@@ -22,6 +22,10 @@ task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
     args = ['link']
 }
 
+task yarnUnlink( type: NodeTask, dependsOn: 'yarn' ) {
+    args = ['unlink', 'expresskt']
+}
+
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
     outputFile = "lib/output/index.js"
