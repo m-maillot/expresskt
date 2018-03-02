@@ -35,6 +35,5 @@ task yarnUnlink( type: NodeTask, dependsOn: 'yarn' ) {
 
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
-    outputFile = jsDir.absolutePath + "/index.js"
     sourceMap = true
 }

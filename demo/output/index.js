@@ -1,9 +1,9 @@
-(function (_, Kotlin, $module$index) {
+(function (_, Kotlin, $module$expresskt) {
   'use strict';
-  var ExpressKt = $module$index.com.expressjs.ExpressKt;
-  var Method = $module$index.com.expressjs.dsl.Method;
+  var ExpressKt = $module$expresskt.com.expressjs.ExpressKt;
+  var Method = $module$expresskt.com.expressjs.dsl.Method;
   var Unit = Kotlin.kotlin.Unit;
-  var application = $module$index.com.expressjs.dsl.application_49nevt$;
+  var application = $module$expresskt.com.expressjs.dsl.application_49nevt$;
   var println = Kotlin.kotlin.io.println_s8jyv4$;
   function main$lambda$lambda$lambda(req, res) {
     res.sendStatus(200).send('Hello world!');
@@ -33,6 +33,6 @@
   main([]);
   Kotlin.defineModule('index', _);
   return _;
-}(module.exports, require('kotlin'), require('index')));
+}(module.exports, require('kotlin'), require('expresskt')));
 
 //# sourceMappingURL=index.js.map
