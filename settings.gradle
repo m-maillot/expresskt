@@ -1,5 +1,4 @@
 rootProject.name = 'expressjs'
-include ':demo'
-include ':ExpressKT'
-project(':ExpressKT').projectDir = new File("lib")
+include 'demo'
+include 'expresskt'
 

@@ -12,7 +12,7 @@ node {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
-    compile project(":ExpressKT")
+    compile project(":expresskt")
 
     testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
 }

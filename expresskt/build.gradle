@@ -27,7 +27,7 @@ task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
 }
 
 task yarnUnlink( type: NodeTask, dependsOn: 'yarn' ) {
-    args = ['unlink', '"ExpressKT"']
+    args = ['unlink', '"expresskt"']
     execOverrides {
         it.workingDir = jsDir
     }
