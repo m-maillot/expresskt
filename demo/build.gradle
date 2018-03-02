@@ -26,6 +26,6 @@ task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
 
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
-    outputFile = "demo/output/index.js"
+    outputFile = "output/index.js"
     sourceMap = true
 }
