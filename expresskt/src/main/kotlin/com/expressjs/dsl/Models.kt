@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.expressjs.dsl
 
 import com.expressjs.wrapper.Request
