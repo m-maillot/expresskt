@@ -3,6 +3,7 @@ version '0.1'
 apply plugin: 'com.moowork.node'
 apply plugin: 'kotlin2js'
 
+def jsDir = new File(projectDir, "output")
 
 node {
     version = '6.11.0'
@@ -26,6 +27,6 @@ task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
 
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
-    outputFile = "output/index.js"
+    outputFile = jsDir.absolutePath + "/index.js"
     sourceMap = true
 }

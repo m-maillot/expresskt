@@ -3,10 +3,15 @@ version '0.1'
 apply plugin: 'com.moowork.node'
 apply plugin: 'kotlin2js'
 
+def jsDir = new File(projectDir, "output")
+
 
 node {
     version = '6.11.0'
     download = true
+    nodeModulesDir = jsDir
+    npmWorkDir = jsDir
+    yarnWorkDir = jsDir
 }
 
 dependencies {
@@ -14,20 +19,22 @@ dependencies {
     testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
 }
 
-task yarnInstall( type: NodeTask, dependsOn: 'yarn' ) {
-    args = ['init', 'add', 'express']
-}
-
 task yarnLink( type: NodeTask, dependsOn: 'yarn' ) {
     args = ['link']
+    execOverrides {
+        it.workingDir = jsDir
+    }
 }
 
 task yarnUnlink( type: NodeTask, dependsOn: 'yarn' ) {
-    args = ['unlink', 'expresskt']
+    args = ['unlink', '"ExpressKT"']
+    execOverrides {
+        it.workingDir = jsDir
+    }
 }
 
 compileKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
-    outputFile = "output/index.js"
+    outputFile = jsDir.absolutePath + "/index.js"
     sourceMap = true
 }
