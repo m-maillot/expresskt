@@ -1,6 +1,6 @@
 # ExpressKT
 
-Kotlin wrappers for ExpressJS library.
+Kotlin wrappers for [ExpressJS](http://expressjs.com/) library.
 
 ## How to use
 
