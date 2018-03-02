@@ -1,8 +1,16 @@
 {
   "name": "expresskt",
-  "version": "0.1",
+  "version": "0.0.1",
+  "description": "ExpressJS wrappers for KotlinJS",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-maillot/expresskt"
+  },
+  "keywords": ["express", "server", "kotlin", "kotlinjs", "expressjs", "node"],
+  "author": "Martial Maillot",
+  "homepage": "https://github.com/m-maillot/expresskt",
   "dependencies": {
     "express": "^4.16.2",
     "kotlin": "^1.2.21"
