@@ -2,7 +2,11 @@
 
 Kotlin wrappers for [ExpressJS](http://expressjs.com/) library.
 
-## How to use
+[![](https://jitpack.io/v/m-maillot/expresskt.svg)](https://jitpack.io/#m-maillot/expresskt)
+
+[![NPM Version][npm-image]][npm-url]
+
+## How to contribute
 
 Compile source :
 
