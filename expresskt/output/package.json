@@ -11,6 +11,9 @@
   "keywords": ["express", "server", "kotlin", "kotlinjs", "expressjs", "node"],
   "author": "Martial Maillot",
   "homepage": "https://github.com/m-maillot/expresskt",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "express": "^4.16.2",
     "kotlin": "^1.2.21"
