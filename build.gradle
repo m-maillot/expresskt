@@ -1,25 +1,32 @@
+group = "com.expressjs"
+version = "4.16.0-2"
+
 buildscript {
-    ext.kotlin_version = '1.2.21'
+    ext.kotlin_version = '1.2.30'
 
     repositories {
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
     }
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
+apply plugin: 'kotlin2js'
+
+repositories {
+    mavenCentral()
 }
 
-group = "com.expressjs"
-version = "4.16.0-1"
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
+}
+
+compileKotlin2Js.kotlinOptions {
+    moduleKind = "commonjs"
+    sourceMap = true
+    outputFile = "output/index.js"
+}
+
+

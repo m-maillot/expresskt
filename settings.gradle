@@ -1,4 +1,2 @@
 rootProject.name = 'expressjs'
-include 'demo'
-include 'expresskt'
 
